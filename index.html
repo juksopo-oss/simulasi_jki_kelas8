@@ -569,11 +569,7 @@
       document.getElementById('phase1').classList.remove('active');
       document.getElementById('phase2').classList.add('active');
       
-      if (window.elementSdk) {
-        window.elementSdk.setConfig({
-          instruction_text: "Fase 2: Pilih perangkat pengirim dan penerima, lalu tulis pesan untuk dikirim"
-        });
-      }
+      document.getElementById('instructionText').textContent = "Fase 2: Pilih perangkat pengirim dan penerima, lalu tulis pesan untuk dikirim";
 
       document.getElementById('connectBtn').style.display = 'none';
       document.getElementById('finishNetworkBtn').style.display = 'none';
@@ -677,11 +673,7 @@
       document.getElementById('phase2').classList.remove('active');
       document.getElementById('phase3').classList.add('active');
 
-      if (window.elementSdk) {
-        window.elementSdk.setConfig({
-          instruction_text: "Fase 3: Lihat bagaimana pesan dipecah menjadi paket dan menemukan rutenya!"
-        });
-      }
+      document.getElementById('instructionText').textContent = "Fase 3: Lihat bagaimana pesan dipecah menjadi paket dan menemukan rutenya!";
 
       const packets = splitIntoPackets(message);
       displayPackets(packets);
@@ -882,11 +874,7 @@
       document.getElementById('phase3').classList.remove('active');
 
       // Reset instruction text
-      if (window.elementSdk) {
-        window.elementSdk.setConfig({
-          instruction_text: defaultConfig.instruction_text
-        });
-      }
+      document.getElementById('instructionText').textContent = defaultConfig.instruction_text;
 
       // Clear network canvas connections
       const canvas = document.getElementById('networkCanvas');
@@ -928,5 +916,5 @@
       updateConnectionList();
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b2e0a023218f902',t:'MTc2NjU1NzcxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b2e5245c2ba229b',t:'MTc2NjU2MDY3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
